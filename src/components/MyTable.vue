@@ -1,6 +1,6 @@
 <template>
   <div class="table-responsive">
-    <table class="table table-striped">
+    <table class="table">
       <tbody>
       <tr>
         <th>Header 1</th>
@@ -14,6 +14,7 @@
         :key="`dummy-${i}`"
         :item="item"
       />
+      <ButtonRow />
       </tbody>
     </table>
   </div>
@@ -21,9 +22,13 @@
 
 <script>
 import DataRow from "./DataRow";
+import ButtonRow from "./ButtonRow";
 export default {
   name: "MyTable",
-  components: {DataRow},
+  components: {
+    DataRow,
+    ButtonRow,
+  },
   data() {
     return {
       dummy: [
